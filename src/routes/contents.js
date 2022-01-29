@@ -23,11 +23,11 @@ router.get("/new", async (req, res) => {
 //Top Books 
 router.get("/top", async (req, res) => {
     try{
-        fetch('http://127.0.0.1/interactions')
+        fetch('https://microservicesapis.herokuapp.com/interactions')
         .then(res => res.json())
         .then(data => {
             if(data.message =="All Interactions") {
-                fetch('http://127.0.0.1/contents/new')
+                fetch('https://microservicesapis.herokuapp.com/contents/new')
                 .then(res => res.json())
                 .then(books => {
                     if(books.message =="New Books") {
