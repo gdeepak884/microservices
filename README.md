@@ -1,4 +1,4 @@
-<h1 align="center">ServiceApis</h1>
+<h1 align="center">MicroserviceApis</h1>
 
 <p align="center">
   <i>Microservices for Content & User Services</i>
@@ -87,10 +87,9 @@
 
 ## Tech Stack
 
+- ExpressJS
 - NodeJS
-- GraphQL
 - MangoDB 
-- Apollo server
 - JWT
 
 ## Architecture Design
@@ -105,7 +104,7 @@
 
 [Postman Documentation](https://documenter.getpostman.com/view/13401788/UVXqDsY5)
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/2b684f9cb08eeb4b7c3a?action=collection%2Fimport)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/1534f77f183ec0251709?action=collection%2Fimport)
 
 
 ## Getting setup
@@ -119,20 +118,20 @@
 Download the project
 
 ```
-$ git clone https://github.com/gdeepak884/serviceapi.git
+$ git clone https://github.com/gdeepak884/microservices.git
 ```
 
 To start the server
 
 ```
-$ cd serviceapi
+$ cd microservices
 $ docker compose up
 ```
 
 to play with APIs, navigate to the below address in
 your preferred browser.
 
-`127.0.0.1:80/graphql`
+`127.0.0.1:80/`
 
 To stop the server
 
@@ -151,13 +150,13 @@ $ docker compose down
 Download the project
 
 ```
-$ git clone https://github.com/gdeepak884/serviceapi.git
+$ git clone https://github.com/gdeepak884/microservices.git
 ```
 
 To start the server
 
 ```
-$ cd serviceapi
+$ cd microservices
 $ npm install
 $ npm run dev/prod
 ```
@@ -167,7 +166,7 @@ $ npm run dev/prod
 to play with APIs, navigate to the below address in
 your preferred browser.
 
-`127.0.0.1:80/graphql`
+`127.0.0.1:80/`
 
 ## Data Ingestion
 
@@ -212,7 +211,7 @@ query{
 
 ```
 
-In this query, we are trying to reach all books with all details from our books’ schema. The result of this query would be like, for example:
+In this query, we are trying to reach all books sorted based on the number of interactions, with all details from our books’ schema. The result of this query would be like, for example:
 
 Response:
 
@@ -258,9 +257,6 @@ Response:
   }
 }
 ```
-## Quick Video
-
-[Demo Video](https://www.youtube.com/watch?v=EbYbtmU9VnY)
 
 ## License
 
