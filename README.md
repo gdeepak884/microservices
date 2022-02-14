@@ -24,8 +24,6 @@
 
 ## Documentation
 
-![APIs](https://raw.githubusercontent.com/gdeepak884/serviceapi/main/img/apis.png?token=GHSAT0AAAAAABO4KBTKXAG76J3CTD74ICAGYPV3CJQ)
-
 ### User Services
 
 1. getUser(): Get users details
@@ -91,14 +89,6 @@
 - NodeJS
 - MangoDB 
 - JWT
-
-## Architecture Design
-
-![Architecture Design](https://raw.githubusercontent.com/gdeepak884/serviceapi/main/img/architecture.png?token=GHSAT0AAAAAABO4KBTLNDC2HUVCQXSHBLNUYPV3CKQ)
-## Database Schema
-
-![Database Schema](https://raw.githubusercontent.com/gdeepak884/serviceapi/main/img/schema.png?token=GHSAT0AAAAAABO4KBTLWIVMMUU7NAFWKK6GYPVHGKQ)
-
 
 ## API's Postman Collections
 
@@ -180,83 +170,6 @@ $ npm run ingestion
 or
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a9e3524fb76919145520?action=collection%2Fimport)`[including doc]`
-
-## Sample Query
-
-Request:
-
-```graphql
-
-query{
-  topBooks{
-    _id
-    title
-    story
-    published
-    username
-    likes{
-      _id
-      username
-      likedAt
-    }
-    reads{
-      _id
-      username
-      readAt
-    }
-    likeCount
-    readCount
-  }
-}
-
-```
-
-In this query, we are trying to reach all books sorted based on the number of interactions, with all details from our books’ schema. The result of this query would be like, for example:
-
-Response:
-
-```json
-
-{
-  "data": {
-    "topBooks": [
-      {
-        "_id": "61e5fe971df9db7d3247ef00",
-        "title": "tes",
-        "story": "tess",
-        "published": "2022-01-17T23:41:11.512Z",
-        "username": "gdee",
-        "likes": [],
-        "reads": [
-          {
-            "_id": "61e6720d7bb28c32f6f1bf7f",
-            "username": "gdee",
-            "readAt": "2022-01-18T07:53:49.450Z"
-          },
-          {
-            "_id": "61e673e20bacec92eb0b6797",
-            "username": "gdeeh",
-            "readAt": "2022-01-18T08:01:38.764Z"
-          }
-        ],
-        "likeCount": 0,
-        "readCount": 2
-      },
-      {
-        "_id": "61e6a0b3bd0b9fe7800285e8",
-        "title": "new book test",
-        "story": "book test",
-        "published": "2022-01-18T11:12:51.453Z",
-        "username": "gdeeh",
-        "likes": [],
-        "reads": [],
-        "likeCount": 0,
-        "readCount": 0
-      }
-    ]
-  }
-}
-```
 
 ## License
 
